@@ -46,7 +46,7 @@
     },
     methods: {
       getJson: function(){
-        const url = '/static/resource/0.json'
+        const url = '/static/js/0.json'
         this.$http.get(url).then(Response => {
           console.log(Response);
           this.article.push(Response.body);
