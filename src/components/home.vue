@@ -46,7 +46,7 @@
     },
     methods: {
       getJson: function(){
-        const url = 'https://hangu1116.github.io/dist/static/resource/0.json'
+        const url = '/static/resource/0.json'
         this.$http.get(url).then(Response => {
           console.log(Response);
           this.article.push(Response.body);
