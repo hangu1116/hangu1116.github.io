@@ -12,7 +12,7 @@ const portfinder = require('portfinder')
 
 const express = require('express')
 const app = express()
-var appData = require('../dist/static/resource/0.json')//加载本地数据文件的路径
+var appData = require('/static/resource/0.json')//加载本地数据文件的路径
 var article = appData //获取对应的本地数据
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
