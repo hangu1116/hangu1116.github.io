@@ -46,13 +46,11 @@
     },
     methods: {
       getJson: function(){
-        const url = '/static/js/0.json'
-        this.$http.get(url).then(Response => {
-          console.log(Response);
-          this.article.push(Response.body);
-        },err => {
-          console.log(err)
+        this.$http.get('api/article').then((response) => {
+          console.log(response.body.data)
+          this.article.push(response.body.data) //数据位置
         })
+
       },
       dateFormat: (date) => {
         const formatedDate=new Date(date);
