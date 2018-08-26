@@ -46,6 +46,7 @@
     },
     methods: {
       getJson: function(){
+        alert('3');
         const url = '/static/resource/0.json'
         this.$http.get(url).then(Response => {
           console.log(Response);
