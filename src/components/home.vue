@@ -41,7 +41,19 @@
         ]
       }
     },
+    created: function(){
+      this.getJson()
+    },
     methods: {
+      getJson: function(){
+        const url = 'https://hangu1116.github.io/dist/static/resource/0.json'
+        this.$http.get(url).then(Response => {
+          console.log(Response);
+          this.article.push(Response.body);
+        },err => {
+          console.log(err)
+        })
+      },
       dateFormat: (date) => {
         const formatedDate=new Date(date);
         const days = formatedDate.getDate();
